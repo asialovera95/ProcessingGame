@@ -11,6 +11,8 @@ private Cerchio3 c3;
 private Cerchio4 c4;
 private Cerchio5 c5;
 private Cerchio6 c6;
+private CerchioSn sn;
+private CerchioSn1 sn1;
 
 public void settings(){
     size(900, 900);  //dimensione finestra
@@ -48,6 +50,14 @@ void setup() {
   c4 = new Cerchio4();
   c5 = new Cerchio5();
   c6 = new Cerchio6();
+  
+  //pupazzo di neve
+  sn = new CerchioSn();
+  sn1 = new CerchioSn1();
+  
+  //curva
+  noFill();
+  
   
 }
 
@@ -105,5 +115,31 @@ void draw() {
   c5.show();
   c6.setColore(color(194,000,000)); 
   c6.show();
+  //-------------
+  
+//pupazzo di neve
+  sn.setColore(color(255,255,255)); 
+  sn.show();
+  sn1.setColore(color(255,255,255)); 
+  sn1.show();
+  
+  //curve
+  //naso
+  stroke(255, 102, 0);
+  curve(290, 295, 300, 300, 307, 300, 315, 295);
+  
+  //bocca
+  stroke(0);
+  arc(308, 318, 20, 15, 0, PI);
+  
+  //occhi
+  stroke(0,32,79);
+  point(288, 280);
+  
+  stroke(0,32,79);
+  point(320, 280);
+  
+  
+
   
 }
